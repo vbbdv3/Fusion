@@ -27,3 +27,29 @@ game:GetService("ReplicatedStorage").Functions.Hatch:InvokeServer(unpack(args))
 wait(0.1)
 end
 end)
+
+local mod = main:Button("Rebirth 10", function()
+_G.Rebirth10_enabled = not _G.Rebirth10_enabled
+
+while _G.Rebirth10_enabled do
+local args = {
+    [1] = 10
+}
+
+game:GetService("ReplicatedStorage").Events.Rebirth:FireServer(unpack(args))
+wait(0.1)
+end
+end)
+
+local mod = main:Button("Rebirth 100", function()
+_G.Rebirth100_enabled = not _G.Rebirth100_enabled
+
+while _G.Rebirth100_enabled do
+local args = {
+    [1] = 100
+}
+
+game:GetService("ReplicatedStorage").Events.Rebirth:FireServer(unpack(args))
+wait(0.1)
+end
+end)
